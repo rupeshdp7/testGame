@@ -1,0 +1,50 @@
+{
+  "name": "VoyagerLearningActivity",
+  "version": "1.0.0",
+  "description": "Interactive Learning Activities - Letter Match I",
+  "main": "player.js",
+  "scripts": {
+    "start": "npm-run-all --parallel dev:server lint:watch",
+    "dev:server": "webpack-dev-server --hot --inline",
+    "watch": "webpack -w -d",
+    "build": "webpack -p",
+    "lint": "node_modules/.bin/esw webpack.config.* src --color",
+    "lint:watch": "npm run lint -- --watch"
+  },
+  "keywords": [
+    "es6"
+  ],
+  "author": "metagrover",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "copy-webpack-plugin": "^5.0.4",
+    "eslint": "^5.10.0",
+    "eslint-watch": "^4.0.2",
+    "latest-createjs": "1.0.24",
+    "npm-run-all": "^4.0.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "howler": "2.0.12"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "createjs": "^1.0.1",
+    "createjs-module": "^0.8.3",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "jplayer": "^2.9.2",
+    "jquery": "^3.4.1",
+    "latest-createjs": "^1.0.24",
+    "mini-css-extract-plugin": "0.4.0",
+    "node-sass": "4.9.0",
+    "postcss-loader": "^0.9.1",
+    "prejs": "^1.2.6",
+    "sass-loader": "7.0.3",
+    "style-loader": "^0.20.2",
+    "url-loader": "^0.5.7"
+  }
+}

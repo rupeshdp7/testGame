@@ -1,0 +1,166 @@
+body {
+    background: #9a9b9d;
+    font-family: Arial;
+    font-size: 16px;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    color: #575a5d;
+}
+#wrapperParent {
+    position: relative;
+    width: 1024px;
+    height: 698px;
+    overflow: hidden;
+    margin: 0 auto;
+    -webkit-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+}
+#wrapper {
+    position: relative;
+    width: 1024px;
+    height: 698px;
+    -webkit-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+   
+}
+.games{
+	position: absolute;
+	width: 100%;
+    height: 100%;
+}
+#game_1{
+}
+#game_2{
+	top: 200px;
+}
+button#play {
+    position: absolute;
+    top: 130px;
+    width: 10%;
+}
+button#stop {
+    position: absolute;
+    top: 180px;
+    width: 10%;
+}
+
+.progress{
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 20px;
+	width: 0%;
+}
+
+#assetPreloader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    left: 0px;
+    top: 0px;
+    background-color: #fffd48;
+  }
+  
+  
+  #assetPreloaderAnim{
+    position: absolute;
+    left: 0%;
+    right: 0;
+    top: 30%;
+    bottom: 0;
+    margin: 0 auto;
+  }
+  #arc_round{
+    width: 205px;
+    height: 205px;
+    border-radius: 50%;
+    background-color: #e8e03c;
+    position: absolute;
+    left: 0%;
+    right: 0;
+    top: 31%;
+    bottom: 0;
+    margin: 0 auto;
+  }
+  #arc_round img{
+    width: 50%;
+    position: absolute;
+    left: 48px;
+    top: 24px;
+  }
+  #shadow_round{
+        width: 55px;
+        height: 9px;
+        border-radius: 50%;
+        /* background-color: #90324e; */
+        position: absolute;
+        left: 0%;
+        right: 0;
+        top: 54.5%;
+        bottom: 0;
+        margin: 0 auto;
+        filter: blur(3px);
+        background: rgba(144,50,78,1);
+        background: -moz-radial-gradient(center, ellipse cover, rgba(144,50,78,1) 0%, rgba(144,50,78,0) 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(144,50,78,1)), color-stop(100%, rgba(144,50,78,0)));
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(144,50,78,1) 0%, rgba(144,50,78,0) 100%);
+        background: -o-radial-gradient(center, ellipse cover, rgba(144,50,78,1) 0%, rgba(144,50,78,0) 100%);
+        background: -ms-radial-gradient(center, ellipse cover, rgba(144,50,78,1) 0%, rgba(144,50,78,0) 100%);
+        background: radial-gradient(ellipse at center, rgba(144,50,78,1) 0%, rgba(144,50,78,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#90324e', endColorstr='#90324e', GradientType=1 );
+  }
+
+  #deviceLaunch {
+        display: none;
+        background: rgba(0,0,0,0.8);
+        cursor: pointer;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        z-index: 9;
+        position: absolute;
+    }
+    #deviceLaunchIcon {
+        position: absolute;
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 86px;
+        height: 79px;
+        border-radius: 50%;
+    }
+    #deviceLaunchIcon:hover {
+        transform: translate(-50%, -50%) scale(1.1); 
+    }
+    #laoding_text{
+        width: 205px;
+        height: 50px;
+        position: absolute;
+        left: 0%;
+        right: 0;
+        top: 63%;
+        bottom: 0;
+        margin: 0 auto;
+        color: #979227;
+        font-size: 28px;
+        font-family: ARLRDBD_0;
+        text-align: center;
+    }

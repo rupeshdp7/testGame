@@ -1,0 +1,12 @@
+{
+"framerate":24,
+"images":["gold_coin_sprite.png"],
+"frames":{
+    "regY": 0,
+    "height": 92,
+    "regX": 0,
+    "count": 24,
+    "width": 90
+},
+"animations":{}
+}

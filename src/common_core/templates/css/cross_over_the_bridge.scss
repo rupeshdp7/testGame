@@ -1,0 +1,416 @@
+[data_attr~="gameView"],
+.gamePlot {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+    display: none;
+    [data_attr="playBtn"] {
+        position: relative;
+        height: 60px;
+        width: 60px;
+    }
+
+    .boyAnim {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+    }
+    .groundAnim {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+    }
+    .bgAnime {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .topSection {
+        position: absolute;
+        left: 26.5%;
+        top: 0;
+        width: 460px;
+        .letters {
+            pointer-events: none;
+            position: absolute;
+            z-index: 1;
+            height: 80px;
+            width: 80px;
+            float: left;
+            margin-top: 6px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 20px;
+            color: black;
+            cursor: pointer;
+            opacity: 0;
+            line-height: 50px;
+            margin-left: 12px;
+            -webkit-animation: load 5s;
+            animation: load 5s;
+            animation-iteration-count: 1;
+            display:none;
+            top: -83px;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+            .highlight_ring{
+                position: absolute;
+                z-index: -1;
+                width: 82px;
+                height: 82px;
+                border-radius: 50px;
+                left: -1px;
+                top: -1px;
+            }
+        }
+        .letterOver{
+            transform: translatey(0px);
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% {
+                transform: translatey(0px);
+            }
+            50% {
+                transform: translatey(-5px);
+            }
+            100% {
+                transform: translatey(0px);
+            }
+        }
+        .correctCoinBounce{
+            z-index: 2 !important;
+            -webkit-animation-name: bounce;
+            animation-name: bounce; 
+            -webkit-transform-origin: center bottom; 
+            transform-origin: center bottom;
+            -webkit-animation-duration: 1s; 
+            animation-duration: 1s; 
+            -webkit-animation-fill-mode: both; 
+            animation-fill-mode: both; 
+            animation-iteration-count: 1;
+        }
+        @keyframes bounce { from, 20%, 53%, 80%, to { -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); } 40%, 43% { -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); -webkit-transform: translate3d(0, -30px, 0); transform: translate3d(0, -30px, 0); } 70% { -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); -webkit-transform: translate3d(0, -15px, 0); transform: translate3d(0, -15px, 0); } 90% { -webkit-transform: translate3d(0, -4px, 0); transform: translate3d(0, -4px, 0); } }
+        .letters img {
+            height: 80px;
+            width: 80px;
+        }
+        .hide {
+            color: transparent;
+            cursor: default;
+            background: transparent !important;
+            opacity: 0 !important;
+            display: none;
+        }
+        .letters:hover {
+            transform: scale(1.07);
+            transition: 0.1s all;
+            canvas {
+                opacity: 1;
+            }
+        }
+        .topSectionPatch {
+            position: absolute;
+            height: 170px;
+            width: 100%;
+            z-index: 11;
+        }
+        .letters canvas {
+            width: 90px;
+            height: 92px;
+            position: absolute;
+            top: -16px;
+            left: -12px;
+            opacity: 0;
+        }
+        .letters span {
+            position: absolute;
+            z-index: 3;
+            font-size: 48px;
+            width: 100%;
+            text-align: center;
+            left: 2px !important;
+            line-height: 74px;
+            color: #c95223;
+            top: 0px !important;
+            opacity: 1;
+            font-family: ARLRDBD_0;
+        }
+        .fcoin span{
+            left: 1px !important;
+            line-height: 83px;
+        }
+        .Acoin span{
+            left: 2px !important;
+            line-height: 83px;
+            top: -2px !important;
+        }
+        .coinResizeAnim{
+           transform: scale(0.5);
+        }
+       
+
+        #coin_1,
+        #coin_6 {
+            left: 90px;
+        }
+        #coin_2,
+        #coin_7 {
+            left: 180px;
+        }
+        #coin_3,
+        #coin_8 {
+            left: 270px;
+        }
+        #coin_4,
+        #coin_9 {
+            left: 360px;
+        }
+        #coin_5 {
+            left: 0px;
+        }
+        
+    }
+
+    .midSection {
+        position: absolute;
+    }
+
+    .bottomSection {
+        position: absolute;
+        left: 0px;
+        bottom: 19px;
+        border-radius: 10px;
+        width: 100%;
+        height: 138px;
+        background-repeat: no-repeat;
+        [data_attr^="letter"],
+        [data_attr^="letter_bottom"],
+        .letters_bottom {
+            position: relative;
+            height: 39px;
+            width: 39px;
+            float: left;
+            margin: 4px 8px 0px 0px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 20px;
+            color: black;
+            line-height: 30px !important;
+            top: 80px;
+            left: 128px;
+
+            .bottom_highlight{
+                width: 52px;
+                height: 52px;
+                position: absolute;
+                left: -1px;
+                top: -1px;
+                border-radius: 50px;
+            }
+            .bottom_img_coin{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-size: 100% 100% !important;
+                background-repeat: no-repeat !important;
+            }
+        }
+        .letters_bottom span {
+            position: absolute;
+            z-index: 3;
+            font-size: 23px;
+            width: 100%;
+            text-align: center;
+            left: 1px;
+            line-height: 35px;
+            color: #c95223;
+            top: 0px;
+            opacity: 1;
+            font-family: ARLRDBD_0;
+        }
+    }
+    .timer {
+        position: absolute;
+        top: 10px;
+        right: 50px;
+        font-size: 30px;
+        z-index: 1;
+        color: blue;
+    }
+
+    .buttonsPannel {
+        position: absolute;
+        bottom: 22px;
+        right: 66px;
+        width: 539px;
+        height: 70px;
+        z-index: 4;
+        .buttonsPatch{
+            display: none;
+            position: absolute;
+            height: 90px;
+            width: 240px;
+            z-index: 4;
+            left: 165px;
+        }
+        .resetPatch{
+            position: absolute;
+            height: 80px;
+            width: 80px;
+            z-index: 4;
+            right: 450px;
+        }
+    }
+
+    .buttons {
+        float: left;
+        height: 70px;
+        width: 70px;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        cursor: pointer;
+        top: 4px;
+    }
+
+    
+    .audioOff {
+        display: none;
+    }
+
+    .MusicOn {
+        position: absolute;
+        left: 173px;
+    }
+    .MusicOff {
+        display: none;
+        position: absolute;
+        left: 173px;
+    }
+    .audioOn {
+        position: absolute;
+        left: 330px;
+    }
+    .reset {
+        position: absolute;
+        left: 15px;
+    }
+    .buttonText{
+        position: absolute;
+        width: 90px;
+        height: 34px;
+        background-size: 100% 100%;
+        top:25px;
+        font-size: 22px;
+        padding-left: 10px;
+        font-family: ARLRDBD_0;
+        text-shadow: rgb(149, 72, 38) 3px 0px 0px, rgb(149, 72, 38) 2.83487px 0.981584px 0px, rgb(149, 72, 38) 2.35766px 1.85511px 0px, rgb(149, 72, 38) 1.62091px 2.52441px 0px, rgb(149, 72, 38) 0.705713px 2.91581px 0px, rgb(149, 72, 38) -0.287171px 2.98622px 0px, rgb(149, 72, 38) -1.24844px 2.72789px 0px, rgb(149, 72, 38) -2.07227px 2.16926px 0px, rgb(149, 72, 38) -2.66798px 1.37182px 0px, rgb(149, 72, 38) -2.96998px 0.42336px 0px, rgb(149, 72, 38) -2.94502px -0.571704px 0px, rgb(149, 72, 38) -2.59586px -1.50383px 0px, rgb(149, 72, 38) -1.96093px -2.27041px 0px, rgb(149, 72, 38) -1.11013px -2.78704px 0px, rgb(149, 72, 38) -0.137119px -2.99686px 0px, rgb(149, 72, 38) 0.850987px -2.87677px 0px, rgb(149, 72, 38) 1.74541px -2.43999px 0px, rgb(149, 72, 38) 2.44769px -1.73459px 0px, rgb(149, 72, 38) 2.88051px -0.838247px 0px;
+    }
+    .resetText{
+        left: 80px;
+    }
+    .audioText{
+        left: 395px;
+    }
+    .musicText{
+        left: 240px;
+    }
+    .audioOn:hover {
+        transform: scale(1.1);
+    }
+    .MusicOn:hover {
+        transform: scale(1.1);
+    }
+    .MusicOff:hover {
+        transform: scale(1.1);
+    }
+    .reset:hover{
+        transform: scale(1.1);
+    }
+    .gameEndParent{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        margin: 0 auto;
+        background-color: #00000054;
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        z-index: 3;
+        .gameEndPopUp {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            p{
+                font-size: 20pt;
+                position: absolute;
+                top: 429px;
+                z-index: 1;
+                width: 547px;
+                left: 193px;
+                color: #FFFFFF;
+                font-family: ARLRDBD_0;
+            }
+            img{
+                top: -4px;
+                position: absolute;
+                left: 134px;
+                background-size: 100% 100%;
+                width: 660px;
+            }
+        }
+        
+        
+    }
+    .animateGameEndPopUp{
+        -webkit-animation: bar 1s ease;
+        animation: bar 1s ease;
+    }
+    @keyframes bar
+    {
+        0% {
+            top:-200px;
+        }
+    }
+    .GameEndPopUp{
+        -webkit-animation-name: boardBounce;
+        animation-name: boardBounce; 
+        -webkit-transform-origin: center bottom; 
+        transform-origin: center bottom;
+        -webkit-animation-duration: 1s; 
+        animation-duration: 1s; 
+        -webkit-animation-fill-mode: both; 
+        animation-fill-mode: both; 
+        animation-iteration-count: 1;
+    }
+    
+    @keyframes boardBounce { from, 20%, 53%, 80%, to {
+          -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); 
+          -webkit-transform: translate3d(0, 0, 0); 
+          transform: translate3d(0, 0, 0); } 40%, 43% { 
+          -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); 
+          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); 
+          -webkit-transform: translate3d(0, -20, 0); 
+          transform: translate3d(0, -20px, 0); } 70% { 
+          -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); 
+          animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); 
+          -webkit-transform: translate3d(0, -10px, 0); 
+          transform: translate3d(0, -10px, 0); } 90% { 
+          -webkit-transform: translate3d(0, -4px, 0); 
+          transform: translate3d(0, -5px, 0); } }
+}
+

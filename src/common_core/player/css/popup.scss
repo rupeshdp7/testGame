@@ -1,0 +1,40 @@
+[data_attr^="startPopup"] {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*border: 1px solid;*/
+    top: 0;
+    left: 0;
+    padding: 10px;
+    // color: white;
+    [data_attr="header"] {
+        font-size: 50px;
+    }
+    [data_attr="playBtn"] {
+        position: relative;
+        top: 85%;
+        height: 52px;
+        left: 40%;
+        width: 181px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 1;
+    }
+    .hidden{
+        pointer-events: none;
+    }
+    ._introVideo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1024px!important;
+        height: 698px!important;
+    }
+    ._introVideo video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1024px!important;
+        height: 698px!important;
+    }
+}

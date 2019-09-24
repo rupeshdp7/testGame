@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Voyager Sopris- Letter Match 1</title>
+	
+</head>
+<body>
+    <div  id="wrapperParent">
+		<div  id="wrapper"><div  id="assetPreloader"><div id="arc_round"></div><div id="shadow_round"></div><canvas width='230' height='230' id="assetPreloaderAnim"></canvas><div id="laoding_text"></div></div>
+		
+	</div>
+
+	<script type="text/javascript" src="bundle.js"></script>
+	
+	<script>
+		var gameData={
+			"singleQuestion":true,//true if question is repeated, false if questions are individual.
+			"correctWordCount":6,//total number of questions
+			"question":["question_1"],//questions audios
+			"answers": ["a"],//answer letters
+			"distractorArray":["s","r","f","s"],//distraction letters
+			"timer":"0:0:20",// timer; not currently used
+			"congratulationPopUp_1": "You've found three correct letters consecutively that make the sound /a/.",
+			"congratulationPopUp_2": "You've found all the correct letters that make the sound /a/."
+		}
+		window.onload = function(){
+			PlayerWrapper.prototype.initialize(gameData);
+        };
+	</script>
+</body>
+</html>

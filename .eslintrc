@@ -1,0 +1,30 @@
+
+{
+    "rules": {
+        "indent": [
+            2,
+            4
+        ],
+        "linebreak-style": [
+            2,
+            "unix"
+        ],
+        "semi": [
+            2,
+            "always"
+        ],
+        "no-console":"off"
+    },
+	"globals": {
+		"createjs": true,
+	},
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+	"parserOptions": {
+		"sourceType": "module"
+	},
+    "extends": "eslint:recommended"
+}
