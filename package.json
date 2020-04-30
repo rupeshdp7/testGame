@@ -37,7 +37,7 @@
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
     "jplayer": "^2.9.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "latest-createjs": "^1.0.24",
     "mini-css-extract-plugin": "0.4.0",
     "node-sass": "4.9.0",
