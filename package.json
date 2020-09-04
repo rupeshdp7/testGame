@@ -40,7 +40,7 @@
     "jquery": "^3.4.1",
     "latest-createjs": "^1.0.24",
     "mini-css-extract-plugin": "0.4.0",
-    "node-sass": "4.9.0",
+    "node-sass": "4.13.1",
     "postcss-loader": "^0.9.1",
     "prejs": "^1.2.6",
     "sass-loader": "7.0.3",
